@@ -26,7 +26,7 @@ Quick guide on how to use:
 
 ```
 #import module
-from bwAPI import bmww
+from bmwwAPI import bmww
 
 #create api object
 api = bmww()
