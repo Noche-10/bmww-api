@@ -1,4 +1,4 @@
-from bwAPI import bmww
+from bmwwAPI import bmww
 
 # Create api object
 api = bmww()
