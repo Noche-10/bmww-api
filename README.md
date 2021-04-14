@@ -1,5 +1,11 @@
 # bmww-api
 
+Use : pip install bmww-api 
+
+to install this module
+
+Pypi url : https://pypi.org/project/bmww-api/
+
 Disclaimers: 
 
 - This is not an official api and it is quite weak but it gets the job done. 
