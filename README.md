@@ -1,6 +1,6 @@
 # bmww-api
 
-Use : pip install bmww-api==0.0.6 
+Use : pip install bmww-api==0.0.7 
 
 to install this module
 
