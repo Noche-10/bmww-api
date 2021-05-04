@@ -46,13 +46,17 @@ class works():
                         self.complete_info = self.soup.select('.content')[-1].text
                         break
         else:
-            pass
-        self.page_for_random_story = requests.get('https://batmanwonderwoman.com/fanfiction/').text
-        self.soup_random = soup(self.page_for_random_story, 'html.parser')
-        self.random_story = self.soup_random.select('.content ul')[1].text
-        self.random_story_href = self.soup_random.select('.content ul li a')[3]
-        self.url_list = str(self.random_story_href).split()
-        for item in self.url_list:
-            if 'sid=' in item:
-                self.rand_id = item.split('"')[1].split('=')[1]
-        self.random_story_url = f'https://batmanwonderwoman.com/fanfiction/viewstory.php?sid={self.rand_id}'
+            self.page_for_random_story = requests.get('https://batmanwonderwoman.com/fanfiction/').text
+            self.soup_random = soup(self.page_for_random_story, 'html.parser')
+            self.random_story = self.soup_random.select('.content ul')[1].text
+            self.random_story_href = self.soup_random.select('.content ul li a')[4]
+            self.url_list = str(self.random_story_href).split()
+            try:
+                for item in self.url_list:
+                    if 'sid=' in item:
+                        self.rand_id = item.split('"')[1].split('=')[1]
+                self.random_story_url = f'https://batmanwonderwoman.com/fanfiction/viewstory.php?sid={self.rand_id}'
+            except:
+                print(f"Couldn't get this stories url, printing the href: {self.random_story_href}")
+                self.random_story_url = ''
+                self.rand_id = ''
