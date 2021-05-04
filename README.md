@@ -96,12 +96,8 @@ user_info = [
   
 ]
 
-```
 
-If you don't specify an id you can always get a random story and its url (sometimes getting the url and id doesn't work)
-
-```
-
+#If you don't specify an id you can always get a random story and its url (sometimes getting the url and id doesn't work)
 
 random_story = [
 
