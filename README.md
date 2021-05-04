@@ -1,6 +1,6 @@
 # bmww-api
 
-Use : pip install bmww-api==0.0.7 
+Use : pip install bmww-api==0.0.8
 
 to install this module
 
@@ -97,5 +97,22 @@ user_info = [
 ]
 
 ```
+
+If you don't specify an id you can always get a random story and its url (sometimes getting the url and id doesn't work)
+
+```
+
+
+random_story = [
+
+  work.random_story_url     # gets the url
+  work.random_story         # gets the whole information
+  work.rand_id              # gets the id only
+
+]
+ 
+```
+  
+
 
 For more information in how to use the api, refer to ```example_code.py```
